@@ -1,0 +1,9 @@
+import os
+import pandas as pd
+os.getcwd()
+os.chdir("C:\\Users\\amardeep-singh\\Desktop\\Lean Automation and Templates\\unpivoting pivoting\\using python")
+df=pd.read_excel("Book1.xlsx")
+print(df)
+df1=df.melt(id_vars=['System ID','Submit date'],var_name = 'name',value_name = 'Value')
+print(df1)
+df1.to_excel('d1.xlsx')
